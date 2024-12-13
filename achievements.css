@@ -1,0 +1,179 @@
+/* General Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrollbars */
+}
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Dark background */
+  color: #fff; /* White text for contrast */
+
+h1, h2, p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Particle Background */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Header Section */
+header {
+  padding: 55px;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border-bottom: 1px solid #333; /* Subtle border */
+}
+
+/* Sticky Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 2rem 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Container */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem;
+
+}
+
+
+/* Navbar Links */
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  gap: 4rem;
+}
+.navbar-brand {
+  display: flex; /* Use flexbox to align the image and text */
+  align-items: center; /* Align the image and text vertically */
+  justify-content: center; /* Align the image and text horizontally */
+}
+
+.navbar-brand img {
+  width: 50px; /* Adjust the width of the image */
+  height: 50px; /* Adjust the height of the image */
+  object-fit: cover; /* Ensure the image is scaled properly */
+  margin-right: 10px; /* Add a margin to the right of the image */
+}
+
+.navbar-brand span {
+  font-size: 24px; /* Adjust the font size of the text */
+  font-weight: bold; /* Optional: Add bold font weight */
+  color: #fff; /* Optional: Change the text color */
+}
+
+}
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #ff6f61;
+}
+
+header h1 {
+  font-size: 4 rem;
+  margin: 0;
+  color: #00d1b2; /* Highlighted header color */
+}
+
+/* Team Grid Section */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* One column layout */
+  gap: 40px; /* Space between grid items */
+  max-width: 1200px; /* Limit the grid width */
+  margin: 40px auto; /* Center the grid horizontally */
+  padding: 20px;
+}
+
+/* Individual Team Member Styling */
+.team-member {
+  background-color: #222; /* Dark background for team member sections */
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex; /* Flexbox for aligning items */
+  align-items: flex-start; /* Align image and text to the top */
+  gap: 20px; /* Space between image and text */
+  width: 100%;
+  max-width: 900px; /* Adjust max-width for team member section */
+  flex-direction: row; /* Align items in a row (image on left, text on right) */
+}
+
+.team-member img {
+  width: 250px;
+  height: 250px;
+  border-radius: 40%;
+  margin-bottom: 15px;
+}
+
+/* Member details flex-grow to fill space */
+.team-member .member-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1; /* Ensure description takes the remaining space */
+  width: 100%; /* Ensure full width of the container */
+}
+
+.team-member h3 {
+  font-size: 2.2rem;
+  color: #00d1b2;
+  margin-top: 10px;
+}
+
+.team-member p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* Achievement description list */
+.team-member ul {
+  list-style-type: disc;
+  padding-left: 40px; /* Add space to the left for the bullet points */
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .team-member {
+    flex-direction: column; /* Stack image and description vertically on mobile */
+    align-items: center; /* Center align for mobile */
+  }
+
+  .team-member img {
+    margin-bottom: 20px; /* Increase space between image and description */
+  }
+
+  .team-member .member-details {
+    width: 100%; /* Ensure description takes full width */
+    text-align: center; /* Center align text in mobile view */
+  }
+}
